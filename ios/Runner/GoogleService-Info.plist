@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>896825931400-rgt93dn2rs022q0dp1c2dg8mnae9bevd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.896825931400-rgt93dn2rs022q0dp1c2dg8mnae9bevd</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>896825931400-jgchhph6thq26sc69rus2s6s70i5i7rs.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCQ9hklvA77O1xa-qOwvdU5CDCKvMie-hw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>896825931400</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.ittierraApp</string>
+	<key>PROJECT_ID</key>
+	<string>ittierra-project</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ittierra-project.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:896825931400:ios:91613914c7f0214fd8513d</string>
+</dict>
+</plist>

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "896825931400",
+    "project_id": "ittierra-project",
+    "storage_bucket": "ittierra-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896825931400:android:16d4e4b16f37a695d8513d",
+        "android_client_info": {
+          "package_name": "com.example.ittierra_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896825931400-jgchhph6thq26sc69rus2s6s70i5i7rs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ittierra_app",
+            "certificate_hash": "acc2d48afc307673fb347dc144c141d333ca70ea"
+          }
+        },
+        {
+          "client_id": "896825931400-infc23ig2crj24mdg1a9tvg10ej30nc0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWQ5_kG1NjzxeqTko-O6lFjQ35Y99bWIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896825931400-infc23ig2crj24mdg1a9tvg10ej30nc0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "896825931400-rgt93dn2rs022q0dp1c2dg8mnae9bevd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ittierraApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
