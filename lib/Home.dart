@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:ittierra_app/BottomBar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:ittierra_app/Account/model/user_model.dart';
-import 'Account/screen/Login.dart';
+
+import 'BottomNavBar/TapPage.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -31,29 +31,11 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('SCENTSAY'),
-        backgroundColor: Colors.black,
-        actions: [
-          IconButton( //로그인 버튼
-            icon: const Icon(Icons.account_circle),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>const LogIn()));
-            },
-          )
-        ],
-      ),
+    return const Scaffold(
       body: Center(
-        child: BottomBar(),
+        child: TabPage(),
       ),
     );
   }
-  //로그아웃 함수
-  // Future<void> logout(BuildContext context) async {
-  //   await FirebaseAuth.instance.signOut();
-  //   Navigator.of(context).pushReplacement(
-  //       MaterialPageRoute(builder: (context)=>LogIn()));
-  // }
 }
 

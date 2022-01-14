@@ -56,7 +56,7 @@ class _LogInState extends State<LogIn> {
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.black, width: 1.5),
             borderRadius: BorderRadius.circular(10)
-      )
+          ),
       ),
     );
     final passwordField = TextFormField(
@@ -113,12 +113,6 @@ class _LogInState extends State<LogIn> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black,),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
