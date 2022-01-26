@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ittierra_app/Component/EmptyAppBar.dart';
 import 'package:ittierra_app/Controller/ProductController.dart';
 
 class BodywashProduct extends StatelessWidget {
@@ -32,47 +33,36 @@ class BodywashProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 10,
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+      leading: CircleAvatar(
+        radius: 20,
+        backgroundImage: NetworkImage(
+          bodywashController.bodywash[index].imageUrl,
+        ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          CircleAvatar(
-            radius: 20,
-            backgroundImage: NetworkImage(
-              bodywashController.bodywash[index].imageUrl,
-            ),
-          ),
-          const SizedBox(width: 20,),
-          Expanded(
-              child: TextButton(
-                child: Text(
-                  bodywashController.bodywash[index].name,
-                  style: const TextStyle(color: Colors.black),
-                ),
-                style: TextButton.styleFrom(
-                  alignment: Alignment.centerLeft,
-                  primary: Colors.transparent,
-                  textStyle: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                  ),
-                ),
-                onPressed: () {},
-              ),
-          ),
-          // Expanded(
-          //     child: Text('${bodywashController.bodywash[index].price}'),
-          // ),
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.arrow_right_alt)
-          ),
-        ],
+      title: Text(
+        bodywashController.bodywash[index].name,
+        style: const TextStyle(
+          color: Colors.black,
+          fontSize: 13,
+          fontWeight: FontWeight.bold
+        ),
       ),
+      subtitle: Text(
+        bodywashController.bodywash[index].subtitle,
+        style: TextStyle(
+          fontSize: 13
+        ),
+      ),
+      trailing: Text(
+        bodywashController.bodywash[index].price,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 11,
+        ),
+      ),
+      onTap: () {},
     );
   }
 }

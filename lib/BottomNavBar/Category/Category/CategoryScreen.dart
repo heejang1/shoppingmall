@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:ittierra_app/BottomNavBar/Category/BodyWash/BodyWashProduct.dart';
 import 'package:ittierra_app/BottomNavBar/Category/BodyWash/BodyWashScreen.dart';
+import 'package:ittierra_app/BottomNavBar/Category/BodyWash/BodywashList.dart';
 import 'package:ittierra_app/BottomNavBar/Category/Category/CategoryItems.dart';
 import 'package:ittierra_app/BottomNavBar/Category/Category/CategoryView.dart';
+import 'package:ittierra_app/BottomNavBar/Category/Perfume/PerfumeList.dart';
 import 'package:ittierra_app/BottomNavBar/Category/Perfume/PerfumeScreen.dart';
-import 'package:ittierra_app/BottomNavBar/Category/Shampoo/ShampooScreen.dart';
+import 'package:ittierra_app/BottomNavBar/Category/Shampoo/ShampooScreen_x.dart';
+import 'package:ittierra_app/BottomNavBar/Category/Shampoo/ShampooList.dart';
 import 'package:ittierra_app/BottomNavBar/Search/SearchScreen.dart';
 import 'package:ittierra_app/constant.dart';
+
+import '../Shampoo/ShampooList.dart';
 
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({Key? key}) : super(key: key);
@@ -32,7 +38,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
             icon: const Icon(Icons.search, color: Colors.black,),
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(
-                  builder: (context) => const SearchScreen(),
+                  builder: (context) => SearchScreen(),
               ),
             ),
           )
@@ -46,7 +52,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               trailing: IconButton(
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                      builder: (context) => const ShampooScreen(),
+                      builder: (context) => ShampooList(),
                   )
                 ),
                 icon: const Icon(
@@ -56,7 +62,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               ),
               onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const ShampooScreen(),
+                    builder: (context) => ShampooList(),
                   )
               ),
             ),
@@ -67,7 +73,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               trailing: IconButton(
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const BodywashScreen(),
+                    builder: (context) => BodywashList(),
                   )
                 ),
                 icon: const Icon(
@@ -77,7 +83,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               ),
               onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const BodywashScreen(),
+                    builder: (context) => const BodywashList(),
                   )
               ),
             ),
@@ -88,7 +94,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               trailing: IconButton(
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const PerfumeScreen(),
+                    builder: (context) => const PerfumeList(),
                   )
                 ),
                 icon: const Icon(
@@ -98,7 +104,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               ),
               onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const PerfumeScreen(),
+                    builder: (context) => const PerfumeList(),
                   )
               ),
             ),

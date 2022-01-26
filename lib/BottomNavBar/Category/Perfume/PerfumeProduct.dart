@@ -31,47 +31,30 @@ class PerfumeProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 10,
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+      leading: CircleAvatar(
+        radius: 20,
+        backgroundImage: NetworkImage(
+          perfumeController.perfume[index].imageUrl,
+        ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          CircleAvatar(
-            radius: 20,
-            backgroundImage: NetworkImage(
-              perfumeController.perfume[index].imageUrl,
-            ),
-          ),
-          const SizedBox(width: 20,),
-          Expanded(
-            child: TextButton(
-              child: Text(
-                perfumeController.perfume[index].name,
-                style: const TextStyle(color: Colors.black),
-              ),
-              style: TextButton.styleFrom(
-                alignment: Alignment.centerLeft,
-                primary: Colors.transparent,
-                textStyle: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15,
-                ),
-              ),
-              onPressed: () {},
-            ),
-          ),
-          // Expanded(
-          //     child: Text('${shampooController.shampoo[index].price}'),
-          // ),
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.arrow_right_alt)
-          )
-        ],
+      title: Text(
+        perfumeController.perfume[index].name,
+        style: const TextStyle(
+            color: Colors.black,
+            fontSize: 13,
+            fontWeight: FontWeight.bold
+        ),
       ),
+      trailing: Text(
+        perfumeController.perfume[index].price,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 11,
+        ),
+      ),
+      onTap: () {},
     );
   }
 }

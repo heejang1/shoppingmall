@@ -12,6 +12,7 @@ class BodywashScreen extends StatelessWidget {
         preferredSize: Size.fromHeight(50),
         child: AppBar(
            backgroundColor: Colors.white,
+           elevation: 0,
            title: const Text(
             'Body Wash',
             style: TextStyle(color: Colors.black),

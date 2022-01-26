@@ -1,14 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:ittierra_app/BottomNavBar/Category/Shampoo/ShampooDetail.dart';
 
-class TestScreen extends StatefulWidget {
-  const TestScreen({Key? key}) : super(key: key);
+import '../../../detailscreentest.dart';
+
+class ShampooList extends StatefulWidget {
+  const ShampooList({Key? key}) : super(key: key);
 
   @override
-  _TestScreenState createState() => _TestScreenState();
+  _ShampooListState createState() => _ShampooListState();
 }
 
-class _TestScreenState extends State<TestScreen> {
+class _ShampooListState extends State<ShampooList> {
   final List _Shampoo = [];
   final _firebaseInstance = FirebaseFirestore.instance;
   TextEditingController _searchController = TextEditingController();
@@ -37,6 +40,8 @@ class _TestScreenState extends State<TestScreen> {
             "name" : qn.docs[i]["name"],
             "subtitle" : qn.docs[i]["subtitle"],
             "price" : qn.docs[i]["price"],
+            "detailImage" : qn.docs[i]["detailImage"],
+            "description" : qn.docs[i]["description"],
           }
         );
       }
@@ -81,14 +86,14 @@ class _TestScreenState extends State<TestScreen> {
           children: [
             const Padding(padding: EdgeInsets.all(5)
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Expanded(
                 child: ListView.builder(
                   itemCount: _Shampoo.length,
                   itemBuilder: (_,index){
                     return ListTile(
                       contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 10,vertical: 0
+                        horizontal: 10, vertical: 0
                       ),
                       leading: CircleAvatar(
                         radius: 20,
@@ -117,7 +122,9 @@ class _TestScreenState extends State<TestScreen> {
                           fontSize: 11,
                         ),
                       ),
-                      onTap:  () {},
+                      onTap:  () =>
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (_)=>ShampooDetail(_Shampoo[index]))),
                     );
                   },
                 ),

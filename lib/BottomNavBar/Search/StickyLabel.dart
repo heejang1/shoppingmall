@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class SearchBar extends StatelessWidget {
+class StickyLabel extends StatelessWidget {
   final String text;
   final Color textColor;
-  const SearchBar({
+  const StickyLabel({
     Key? key,
     required this.text,
     required this.textColor,

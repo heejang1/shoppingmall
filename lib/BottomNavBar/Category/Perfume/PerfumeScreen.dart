@@ -11,6 +11,7 @@ class PerfumeScreen extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50),
         child: AppBar(
+          elevation: 0,
           backgroundColor: Colors.white,
           title: const Text(
             'Perfumes',

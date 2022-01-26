@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ittierra_app/Account/screen/IsLogin.dart';
 import 'package:ittierra_app/Account/screen/Login.dart';
+import 'package:ittierra_app/Account/screen/MyPage.dart';
 import 'package:ittierra_app/BottomNavBar/Category/Category/CategoryScreen.dart';
 import 'Shopping cart/cart.dart';
 
@@ -16,7 +18,7 @@ class _TabPageState extends State<TabPage> {
     const CategoryScreen(),
     const Text('Main'),
     const Cart(),
-    const LogIn(),
+    const IsLogin(),
   ];
   void _onItemTapped(int index){
     setState(() {

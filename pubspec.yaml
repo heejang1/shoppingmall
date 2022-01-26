@@ -41,6 +41,7 @@ dependencies:
   google_sign_in:
   provider:
   get:
+  transition:
 
 
 dev_dependencies:
