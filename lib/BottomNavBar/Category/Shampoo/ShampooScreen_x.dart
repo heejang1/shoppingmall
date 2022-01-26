@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ittierra_app/BottomNavBar/Category/Shampoo/ShampooProduct.dart';
@@ -13,6 +14,7 @@ class ShampooScreen extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50),
         child: AppBar(
+          elevation: 0,
           backgroundColor: Colors.white,
           title: const Text(
             'Shampoo',
@@ -31,7 +33,6 @@ class ShampooScreen extends StatelessWidget {
           children: [
             ShampooProduct(),
           ],
-
         ),
       ),
     );
